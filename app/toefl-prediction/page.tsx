@@ -38,7 +38,7 @@ export default function ToeflPredictionPage() {
 
         <div className="max-w-4xl mx-auto text-center space-y-6">
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="flex justify-center mb-4">
-            <img src="/assets/logo.png" alt="English Skill Logo" className="w-24 md:w-32 h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
+            <img src="/assets/logo-2.png" alt="English Skill Logo" className="w-24 md:w-32 h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
           </motion.div>
 
           <motion.h1 initial="hidden" animate="visible" variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
@@ -217,7 +217,7 @@ export default function ToeflPredictionPage() {
       <section className="py-16 md:py-24 px-6 bg-white text-black">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="space-y-8">
-            <span className="inline-block px-3 py-1 rounded bg-blue-100 text-blue-600 text-xs font-bold uppercase tracking-wide">Nilai</span>
+            <span className="inline-block px-3 py-1 rounded bg-[#D4D755]/20 text-black text-xs font-bold uppercase tracking-wide">Nilai</span>
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">
               Sertifikat Dapat Digunakan <br /> Sebagai
             </h2>
@@ -433,7 +433,7 @@ function BenefitCard({ icon: Icon, title, desc, color, bg }: { icon: any; title:
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="p-6 rounded-2xl bg-[#121217] border border-white/10 relative overflow-hidden group hover:border-[#D4D755]/30 transition-colors h-full flex flex-col items-center text-center"
+      className="p-6 rounded-2xl bg-[#09090b] border border-white/10 relative overflow-hidden group hover:border-[#D4D755]/30 transition-colors h-full flex flex-col items-center text-center"
     >
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4D755]/50 to-transparent opacity-50" />
 
