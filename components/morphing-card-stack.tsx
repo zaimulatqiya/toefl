@@ -90,7 +90,7 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
   };
 
   const containerStyles = {
-    stack: "relative h-60 w-full max-w-[22rem] mx-auto md:mx-0",
+    stack: "relative h-72 sm:h-80 w-full max-w-[20rem] sm:max-w-[24rem] mx-auto md:mx-0",
     grid: "grid grid-cols-1 sm:grid-cols-2 gap-4",
     list: "flex flex-col gap-4",
   };
@@ -154,13 +154,13 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
                     onCardClick?.(card);
                   }}
                   className={cn(
-                    "cursor-pointer rounded-2xl border border-gray-100 bg-white p-5 shadow-sm",
+                    "cursor-pointer rounded-2xl border border-[#D4D755]/50 md:border-white/10 bg-[#121217] p-6 shadow-xl",
                     "hover:border-[#D4D755]/50 transition-colors",
-                    layout === "stack" && "absolute w-full h-full shadow-md",
+                    layout === "stack" && "absolute w-full h-full shadow-2xl shadow-black/50",
                     layout === "stack" && isTopCard && "cursor-grab active:cursor-grabbing",
                     layout === "grid" && "w-full min-h-[140px]",
                     layout === "list" && "w-full flex items-center gap-4",
-                    isExpanded && "ring-2 ring-[#D4D755]"
+                    isExpanded && "ring-2 ring-[#D4D755]",
                   )}
                   style={{
                     backgroundColor: card.color || undefined,
@@ -169,14 +169,14 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
                   <div className={cn("flex gap-4", layout === "list" ? "items-center" : "items-start flex-col")}>
                     {card.icon && <div className="shrink-0">{card.icon}</div>}
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-semibold text-card-foreground truncate">{card.title}</h3>
-                      <p className={cn("text-sm text-muted-foreground mt-1", layout === "stack" && "line-clamp-3", layout === "grid" && "line-clamp-2", layout === "list" && "line-clamp-1")}>{card.description}</p>
+                      <h3 className="font-bold text-lg text-white truncate mb-1">{card.title}</h3>
+                      <p className={cn("text-sm text-gray-400 mt-1", layout === "stack" && "line-clamp-3", layout === "grid" && "line-clamp-2", layout === "list" && "line-clamp-1")}>{card.description}</p>
                     </div>
                   </div>
 
                   {isTopCard && layout === "stack" && (
-                    <div className="absolute bottom-3 right-4">
-                      <span className="text-[10px] text-gray-400 font-mono uppercase tracking-widest">Swipe To Navigate</span>
+                    <div className="absolute bottom-4 left-0 right-0 text-center">
+                      <span className="text-[10px] text-gray-600 font-medium uppercase tracking-widest">Swipe To Navigate</span>
                     </div>
                   )}
                 </motion.div>

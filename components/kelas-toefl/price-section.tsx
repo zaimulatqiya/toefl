@@ -1,6 +1,7 @@
 "use client";
 
-import { GetStartedButton } from "@/components/ui/get-started-button";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function PriceSection() {
   const scrollToSection = (id: string) => {
@@ -22,7 +23,21 @@ export function PriceSection() {
         </h2>
         <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto opacity-80 pb-6">Investasi kecil untuk peluang besar di masa depan. Jangan lewatkan kesempatan ini.</p>
         <div className="flex justify-center">
-          <GetStartedButton onClick={() => scrollToSection("daftar-sekarang")} text="Amankan Kursi Sekarang" className="bg-black text-white hover:bg-black/80 border-transparent w-full sm:w-auto px-10 py-8 text-lg rounded-2xl" />
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95, backgroundColor: "#1f1f22", boxShadow: "0 0 20px rgba(212, 215, 85, 0.4)" }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            onClick={() => scrollToSection("daftar-sekarang")}
+            className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-2 md:gap-3 bg-[#09090b] text-white px-6 py-4 md:px-10 md:py-5 rounded-full text-base md:text-xl font-bold shadow-2xl hover:shadow-xl hover:shadow-black/20 transition-all border border-black/5 overflow-hidden cursor-pointer"
+          >
+            {/* Shimmer Effect */}
+            <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent skew-x-12" />
+
+            <span className="relative z-10 flex items-center gap-2">Amankan Kursi Sekarang</span>
+            <div className="relative z-10 w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#D4D755] text-black flex items-center justify-center group-hover:rotate-45 transition-transform duration-300 shadow-lg shadow-[#D4D755]/20 shrink-0">
+              <ArrowRight size={18} className="md:w-5 md:h-5" strokeWidth={2.5} />
+            </div>
+          </motion.button>
         </div>
       </div>
     </section>

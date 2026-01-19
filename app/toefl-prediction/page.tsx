@@ -43,11 +43,11 @@ export default function ToeflPredictionPage() {
 
           <motion.h1 initial="hidden" animate="visible" variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
             Gratis!!! <br />
-            <span className="text-[#D4D755]">Test TOEFL Prediction</span>
+            <span className="text-[#D4D755]">Test TOEFL</span>
           </motion.h1>
 
           <motion.p initial="hidden" animate="visible" variants={fadeInUp} className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-            Tingkatkan kemampuan bahasa Inggris Anda dengan simulasi tes TOEFL standar internasional dari Yayasan Global Operation.
+            Tingkatkan kemampuan bahasa Inggris Anda dengan simulasi tes TOEFL standar internasional.
           </motion.p>
 
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -63,8 +63,27 @@ export default function ToeflPredictionPage() {
           {/* Floating Status & Image Container */}
           <div className="relative mt-8 md:-mt-12 mx-auto w-full max-w-lg flex flex-col items-center justify-center">
             {/* Background Image */}
-            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative z-0 w-48 sm:w-64 md:w-80 -mb-10 md:-mb-20">
-              <img src="/assets/transparant/3.png" alt="Student" className="w-full h-auto object-contain drop-shadow-2xl opacity-80" />
+            {/* Background Image with Frame */}
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative z-0 w-[18rem] sm:w-[20rem] md:w-[22rem] -mb-12 md:-mb-20 mx-auto">
+              {/* Decorative Frame */}
+              <div className="absolute inset-x-4 top-8 bottom-0 border border-[#D4D755]/30 rounded-[2.5rem] bg-[#D4D755]/5 backdrop-blur-sm z-0 transform rotate-1">
+                {/* Inner Glow */}
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-[#D4D755]/0 to-[#D4D755]/10" />
+
+                {/* Tech/Corner Accents */}
+                <div className="absolute -top-[1px] -left-[1px] w-8 h-8 border-t-2 border-l-2 border-[#D4D755] rounded-tl-2xl" />
+                <div className="absolute -top-[1px] -right-[1px] w-8 h-8 border-t-2 border-r-2 border-[#D4D755] rounded-tr-2xl" />
+                <div className="absolute -bottom-[1px] -left-[1px] w-8 h-8 border-b-2 border-l-2 border-[#D4D755] rounded-bl-2xl" />
+                <div className="absolute -bottom-[1px] -right-[1px] w-8 h-8 border-b-2 border-r-2 border-[#D4D755] rounded-br-2xl" />
+              </div>
+
+              {/* Second Offset Frame for Depth */}
+              <div className="absolute inset-x-4 top-8 bottom-0 border border-[#D4D755]/10 rounded-[2.5rem] z-[-1] transform -rotate-2 scale-[0.98]" />
+
+              {/* Image */}
+              <div className="relative z-10 px-2">
+                <img src="/assets/transparant/3.png" alt="Student" className="w-full h-auto object-contain drop-shadow-2xl contrast-110" />
+              </div>
             </motion.div>
 
             {/* Floating Status Card */}
@@ -76,28 +95,25 @@ export default function ToeflPredictionPage() {
               onClick={() => document.getElementById("daftar-cta")?.scrollIntoView({ behavior: "smooth" })}
             >
               {/* Glow Effect behind */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#D4D755]/0 via-[#D4D755]/20 to-[#D4D755]/0 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-r from-gray-200/0 via-gray-200/50 to-gray-200/0 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-              <div className="relative bg-[#121217]/90 backdrop-blur-md border border-white/10 rounded-2xl p-1 overflow-hidden transition-all hover:border-[#D4D755]/40 shadow-2xl">
+              <div className="relative bg-white/90 backdrop-blur-md border border-gray-200 rounded-2xl p-1 overflow-hidden transition-all hover:border-gray-300 shadow-2xl">
                 {/* Inner styling wrapper */}
-                <div className="rounded-xl bg-white/5 p-5 flex items-center gap-5 relative overflow-hidden">
-                  {/* Subtle shine effect */}
-                  <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-[#D4D755]/10 rounded-full blur-2xl" />
-
+                <div className="rounded-xl bg-gray-50 p-5 flex items-center gap-5 relative overflow-hidden">
                   {/* Icon Section */}
                   <div className="relative shrink-0">
-                    <div className="w-14 h-14 rounded-full bg-[#D4D755] flex items-center justify-center shadow-lg shadow-[#D4D755]/20 z-10 relative">
-                      <CheckCircle2 size={28} className="text-black" />
+                    <div className="w-14 h-14 rounded-full bg-black flex items-center justify-center shadow-lg shadow-black/10 z-10 relative">
+                      <CheckCircle2 size={28} className="text-white" />
                     </div>
                     {/* Ripple/Pulse */}
-                    <div className="absolute inset-0 rounded-full border border-[#D4D755]/50 animate-ping opacity-20" />
+                    <div className="absolute inset-0 rounded-full border border-black/10 animate-ping opacity-20" />
                   </div>
 
                   {/* Text Section */}
                   <div className="text-left space-y-1 relative z-10">
-                    <p className="text-xs text-[#D4D755] font-bold tracking-widest uppercase mb-0.5">Available Now</p>
-                    <p className="text-white font-bold text-lg leading-none">Pendaftaran Dibuka</p>
-                    <p className="text-xs text-gray-400 flex items-center gap-1.5 pt-1">
+                    <p className="text-xs text-gray-500 font-bold tracking-widest uppercase mb-0.5">Available Now</p>
+                    <p className="text-gray-900 font-bold text-lg leading-none">Pendaftaran Dibuka</p>
+                    <p className="text-xs text-gray-600 flex items-center gap-1.5 pt-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                       Online & Flexible
                     </p>
@@ -105,7 +121,7 @@ export default function ToeflPredictionPage() {
 
                   {/* Decor arrow */}
                   <div className="ml-auto opacity-0 group-hover:opacity-100 group-hover:translate-x-0 -translate-x-2 transition-all duration-300">
-                    <ArrowRight className="text-[#D4D755]" size={20} />
+                    <ArrowRight className="text-black" size={20} />
                   </div>
                 </div>
               </div>
@@ -120,71 +136,80 @@ export default function ToeflPredictionPage() {
           {/* Problem Card (Discovery/Search Theme) */}
           <motion.div
             whileHover={{ y: -5 }}
-            className="group bg-[#0A0A0A] text-white p-8 pb-60 md:pb-8 rounded-3xl border border-red-500/50 md:border-white/10 md:hover:border-red-500/50 transition-all relative overflow-hidden min-h-[450px] md:min-h-[300px] flex flex-col md:justify-between"
+            className="group bg-[#D4D755] text-black p-8 pb-60 md:pb-8 rounded-3xl transition-all relative overflow-hidden min-h-[450px] md:min-h-[300px] flex flex-col md:justify-between hover:shadow-xl hover:shadow-[#D4D755]/20"
           >
             {/* Abstract Graphic Background */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-red-500/10 via-transparent to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 pointer-events-none" />
 
             {/* Isometric Grid/Element (CSS Graphic) */}
-            <div className="absolute right-0 bottom-0 translate-x-10 translate-y-10 opacity-20 group-hover:opacity-40 transition-opacity">
-              <div className="w-40 h-40 border border-white/20 transform rotate-45 grid grid-cols-2 grid-rows-2">
-                <div className="border border-white/20"></div>
-                <div className="border border-white/20 bg-red-500/20"></div>
-                <div className="border border-white/20"></div>
-                <div className="border border-white/20"></div>
+            <div className="absolute right-0 bottom-0 translate-x-10 translate-y-10 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none">
+              <div className="w-40 h-40 border border-black/20 transform rotate-45 grid grid-cols-2 grid-rows-2">
+                <div className="border border-black/20"></div>
+                <div className="border border-black/20 bg-black/10"></div>
+                <div className="border border-black/20"></div>
+                <div className="border border-black/20"></div>
               </div>
             </div>
 
-            {/* Illustration Image */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-8 w-64 h-64 md:w-60 md:h-60  group-hover:scale-105 transition-all duration-500 ">
-              <img src="/assets/transparant/8.png" alt="Problem Illustration" className="w-full h-full object-contain" />
+            {/* Illustration Image with Frame */}
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-8 w-64 h-64 md:w-60 md:h-60 group-hover:scale-105 transition-all duration-500">
+              {/* Circular Backdrop/Frame */}
+              <div className="absolute inset-4 rounded-full border-2 border-black/5 bg-white/10 backdrop-blur-sm z-0 transform group-hover:rotate-12 transition-transform duration-700" />
+              <div className="absolute inset-4 rounded-full border border-black/10 z-0 transform -rotate-6 scale-90" />
+
+              <img src="/assets/transparant/8.png" alt="Problem Illustration" className="relative z-10 w-full h-full object-contain drop-shadow-xl" />
             </div>
 
             <div className="relative z-10">
-              <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center mb-6 border border-red-500/30 text-red-500">
+              <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center mb-6 text-white shadow-lg">
                 <AlertCircle size={24} />
               </div>
-              <p className="text-xs font-mono text-red-500 mb-2">DISCOVERY</p>
+              <p className="text-xs font-mono text-black/60 font-bold mb-2 tracking-widest">DISCOVERY</p>
               <h3 className="text-3xl font-bold mb-4 leading-tight">Permasalahannya</h3>
             </div>
             <div className="relative z-10 max-w-sm">
-              <p className="text-gray-400 text-lg leading-relaxed">Beberapa dari Anda mungkin merasa minder kemampuan bahasa Inggris masih dasar atau merasa tidak punya bakat.</p>
+              <p className="text-black/70 text-lg leading-relaxed font-medium">Beberapa dari Anda mungkin merasa minder kemampuan bahasa Inggris masih dasar atau merasa tidak punya bakat.</p>
             </div>
           </motion.div>
 
           {/* Fact Card (Structure/Solution Theme) */}
           <motion.div
             whileHover={{ y: -5 }}
-            className="group bg-[#0A0A0A] text-white p-8 pb-72 md:pb-8 rounded-3xl border border-green-500/50 md:border-white/10 md:hover:border-green-500/50 transition-all relative overflow-hidden min-h-[450px] md:min-h-[300px] flex flex-col md:justify-between"
+            className="group bg-[#D4D755] text-black p-8 pb-72 md:pb-8 rounded-3xl transition-all relative overflow-hidden min-h-[450px] md:min-h-[300px] flex flex-col md:justify-between hover:shadow-xl hover:shadow-[#D4D755]/20"
           >
             {/* Abstract Graphic Background */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-green-500/20 via-transparent to-transparent opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-bl from-white/20 to-transparent opacity-50 pointer-events-none" />
 
             {/* Isometric UI/Structure Graphic */}
-            <div className="absolute right-0 bottom-0 translate-x-4 translate-y-6 opacity-80 group-hover:scale-105 transition-transform duration-500">
+            <div className="absolute right-0 bottom-0 translate-x-4 translate-y-6 opacity-30 group-hover:scale-105 transition-transform duration-500 pointer-events-none">
               {/* Simple Isometric Stack Simulation */}
               <div className="relative w-32 h-32">
-                <div className="absolute top-0 right-10 w-16 h-16 border border-white/20 bg-white/5 transform skew-x-12 rotate-[-30deg] z-10 backdrop-blur-sm"></div>
-                <div className="absolute top-8 right-4 w-16 h-4 border border-white/20 bg-green-500/80 transform skew-x-12 rotate-[-30deg] z-20 shadow-lg"></div>
-                <div className="absolute top-16 right-16 w-12 h-12 border border-white/20 rounded-full bg-transparent transform skew-x-12 rotate-[-30deg] z-0"></div>
+                <div className="absolute top-0 right-10 w-16 h-16 border border-black/20 bg-white/10 transform skew-x-12 rotate-[-30deg] z-10 backdrop-blur-sm"></div>
+                <div className="absolute top-8 right-4 w-16 h-4 border border-black/20 bg-black/10 transform skew-x-12 rotate-[-30deg] z-20 shadow-lg"></div>
+                <div className="absolute top-16 right-16 w-12 h-12 border border-black/20 rounded-full bg-transparent transform skew-x-12 rotate-[-30deg] z-0"></div>
               </div>
             </div>
 
             {/* Illustration Image */}
+            {/* Illustration Image with Frame */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-15 w-80 h-80 md:w-72 md:h-72 group-hover:scale-105 transition-all duration-500 z-0">
-              <img src="/assets/transparant/7.png" alt="Solution Illustration" className="w-full h-full object-contain" />
+              {/* Hexagon/Geometric Backdrop/Frame */}
+              <div className="absolute inset-8 border-2 border-dashed border-black/10 rounded-3xl bg-white/10 backdrop-blur-sm z-0 transform rotate-3 group-hover:-rotate-3 transition-transform duration-700" />
+              <div className="absolute inset-8 border border-black/5 rounded-3xl z-0 transform -rotate-3 scale-105" />
+
+              <img src="/assets/transparant/7.png" alt="Solution Illustration" className="relative z-10 w-full h-full object-contain drop-shadow-xl" />
             </div>
 
             <div className="relative z-10">
-              <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mb-6 border border-green-500/30 text-green-500">
+              <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center mb-6 text-white shadow-lg">
                 <Lightbulb size={24} />
               </div>
-              <p className="text-xs font-mono text-green-500 mb-2">SOLUTION</p>
+              <p className="text-xs font-mono text-black/60 font-bold mb-2 tracking-widest">SOLUTION</p>
               <h3 className="text-3xl font-bold mb-4 leading-tight">Faktanya</h3>
             </div>
 
             <div className="relative z-10 max-w-sm">
-              <p className="text-gray-400 text-lg leading-relaxed">Cukup dengan 1 English Skill sudah bisa meningkatkan peluang kerja & karir, memperluas komunikasi dan sumber wawasan.</p>
+              <p className="text-black/70 text-lg leading-relaxed font-medium">Cukup dengan 1 English Skill sudah bisa meningkatkan peluang kerja & karir, memperluas komunikasi dan sumber wawasan.</p>
             </div>
           </motion.div>
         </div>
@@ -200,15 +225,15 @@ export default function ToeflPredictionPage() {
 
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <BenefitCard icon={Award} title="Sertifikat Langsung Jadi" desc="Tidak perlu menunggu lama, hasil tes dan sertifikat keluar secara otomatis dan instan." color="text-[#D4D755]" bg="bg-[#D4D755]/10" />
+            <BenefitCard icon={Award} title="Sertifikat Langsung Jadi" desc="Tidak perlu menunggu lama, hasil tes dan sertifikat keluar secara otomatis dan instan." color="text-white" bg="bg-black" />
             {/* Card 2 */}
-            <BenefitCard icon={Clock} title="Waktu Fleksibel" desc="Akses tes kapan saja dan dimana saja 24 jam non-stop." color="text-[#D4D755]" bg="bg-[#D4D755]/10" />
+            <BenefitCard icon={Clock} title="Waktu Fleksibel" desc="Akses tes kapan saja dan dimana saja 24 jam non-stop." color="text-white" bg="bg-black" />
             {/* Card 3 */}
-            <BenefitCard icon={CheckCircle2} title="Skor Instan" desc="Skor TOEFL Prediction Anda akan muncul secara real-time." color="text-[#D4D755]" bg="bg-[#D4D755]/10" />
+            <BenefitCard icon={CheckCircle2} title="Skor Instan" desc="Skor TOEFL Prediction Anda akan muncul secara real-time." color="text-white" bg="bg-black" />
             {/* Card 4 */}
-            <BenefitCard icon={Wifi} title="100% Online" desc="Mengerjakan ujian dari rumah menggunakan laptop/hp." color="text-[#D4D755]" bg="bg-[#D4D755]/10" />
+            <BenefitCard icon={Wifi} title="100% Online" desc="Mengerjakan ujian dari rumah menggunakan laptop/hp." color="text-white" bg="bg-black" />
             {/* Card 5 */}
-            <BenefitCard icon={ShieldCheck} title="Sertifikat Resmi" desc="Diakui legalitasnya oleh Yayasan Global Operation dan Dinas Pendidikan." color="text-[#D4D755]" bg="bg-[#D4D755]/10" />
+            <BenefitCard icon={ShieldCheck} title="Sertifikat Resmi" desc="Diakui legalitasnya oleh Yayasan Global Operation dan Dinas Pendidikan." color="text-white" bg="bg-black" />
           </motion.div>
         </div>
       </section>
@@ -231,8 +256,8 @@ export default function ToeflPredictionPage() {
                     title: "Syarat Sidang Skripsi & Wisuda",
                     description: "Diakui di berbagai universitas nasional sebagai syarat kelulusan mahasiswa.",
                     icon: (
-                      <div className="w-10 h-10 rounded-full bg-[#D4D755]/20 flex items-center justify-center shrink-0">
-                        <GraduationCap className="text-yellow-700" size={20} />
+                      <div className="w-10 h-10 rounded-full bg-[#D4D755] flex items-center justify-center shrink-0">
+                        <GraduationCap className="text-black" size={20} />
                       </div>
                     ),
                   },
@@ -241,8 +266,8 @@ export default function ToeflPredictionPage() {
                     title: "Pendukung Lamaran Kerja",
                     description: "Nilai tambah untuk CV profesional Anda dalam melamar di perusahaan multinasional.",
                     icon: (
-                      <div className="w-10 h-10 rounded-full bg-[#D4D755]/20 flex items-center justify-center shrink-0">
-                        <Briefcase className="text-yellow-700" size={20} />
+                      <div className="w-10 h-10 rounded-full bg-[#D4D755] flex items-center justify-center shrink-0">
+                        <Briefcase className="text-black" size={20} />
                       </div>
                     ),
                   },
@@ -251,8 +276,8 @@ export default function ToeflPredictionPage() {
                     title: "Lampiran Test CPNS & BUMN",
                     description: "Memenuhi persyaratan administrasi negara untuk seleksi CPNS dan BUMN.",
                     icon: (
-                      <div className="w-10 h-10 rounded-full bg-[#D4D755]/20 flex items-center justify-center shrink-0">
-                        <FileCheck className="text-yellow-700" size={20} />
+                      <div className="w-10 h-10 rounded-full bg-[#D4D755] flex items-center justify-center shrink-0">
+                        <FileCheck className="text-black" size={20} />
                       </div>
                     ),
                   },
@@ -261,8 +286,8 @@ export default function ToeflPredictionPage() {
                     title: "Persyaratan S1, S2, atau S3",
                     description: "Diterima untuk pendaftaran universitas dalam dan luar negeri.",
                     icon: (
-                      <div className="w-10 h-10 rounded-full bg-[#D4D755]/20 flex items-center justify-center shrink-0">
-                        <School className="text-yellow-700" size={20} />
+                      <div className="w-10 h-10 rounded-full bg-[#D4D755] flex items-center justify-center shrink-0">
+                        <School className="text-black" size={20} />
                       </div>
                     ),
                   },
@@ -319,49 +344,56 @@ export default function ToeflPredictionPage() {
       {/* --- DISCLAIMER SECTION --- */}
       <section className="py-20 px-6 bg-[#0F1005] relative">
         <div className="max-w-5xl mx-auto">
-          <div className="relative overflow-hidden rounded-3xl bg-[#121217] border border-[#D4D755]/30 shadow-2xl group text-left">
+          <div className="relative overflow-hidden rounded-3xl bg-white shadow-2xl group text-left">
             {/* Background Effects */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4D755]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#D4D755]/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000005_1px,transparent_1px),linear-gradient(to_bottom,#00000005_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
 
             <div className="relative z-10 flex flex-col md:flex-row items-center">
               {/* Content Side */}
               <div className="flex-1 p-8 md:p-10 space-y-6 relative z-10">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-[#D4D755] flex items-center justify-center shadow-lg shadow-[#D4D755]/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-300">
-                    <AlertCircle className="text-black w-7 h-7" strokeWidth={2.5} />
+                  <div className="w-14 h-14 rounded-2xl bg-black flex items-center justify-center shadow-lg shadow-black/20 transform -rotate-3 group-hover:rotate-0 transition-transform duration-300">
+                    <AlertCircle className="text-white w-7 h-7" strokeWidth={2.5} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-2xl text-white tracking-tight">Disclaimer Penting</h4>
+                    <h4 className="font-bold text-2xl text-black tracking-tight">Disclaimer Penting</h4>
                     <div className="h-1 w-12 bg-[#D4D755] rounded-full mt-1"></div>
                   </div>
                 </div>
 
                 <ul className="space-y-4">
-                  {[
-                    "Sertifikat ini adalah hasil simulasi (Prediction Test).",
-                    "Hanya diterbitkan oleh lembaga bahasa resmi (Global Foundation).",
-                    "Dapat digunakan untuk keperluan internal, Syarat Skripsi, atau lampiran kerja.",
-                    "Tidak berlaku untuk beasiswa luar negeri resmi (seperti LPDP) yang mengharuskan iBT/ITP resmi dari ETS.",
-                  ].map((text, i) => (
-                    <li key={i} className="flex gap-4 items-start group/item">
-                      <div className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center shrink-0 mt-0.5 border border-white/10 group-hover/item:border-[#D4D755] transition-colors">
-                        <div className="w-1.5 h-1.5 rounded-full bg-[#D4D755]" />
-                      </div>
-                      <span className={`text-base leading-relaxed ${text.includes("Tidak berlaku") ? "text-red-300/90" : "text-gray-300"}`}>{text}</span>
-                    </li>
-                  ))}
+                  {["Sertifikat ini adalah hasil simulasi (Prediction Test).", "Hanya diterbitkan oleh lembaga bahasa resmi (Global Foundation).", "Dapat digunakan untuk keperluan internal, Syarat Skripsi, atau lampiran kerja."].map(
+                    (text, i) => (
+                      <li key={i} className="flex gap-4 items-start group/item">
+                        <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center shrink-0 mt-0.5 shadow-md shadow-black/10">
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#D4D755]" />
+                        </div>
+                        <span className="text-base leading-relaxed text-gray-600">{text}</span>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
 
               {/* Image Side */}
-              <div className="relative w-full md:w-[45%] h-64 md:h-auto overflow-hidden flex items-end justify-center md:justify-end md:self-stretch">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#121217] via-transparent to-transparent md:bg-gradient-to-l md:from-transparent md:via-[#121217]/10 md:to-[#121217]" />
+              {/* Image Side */}
+              <div className="relative w-full md:w-[45%] h-80 md:h-auto overflow-hidden flex items-end justify-center md:justify-end md:self-stretch">
+                {/* Modern Frame Design */}
+                <div className="absolute inset-6 md:inset-y-8 md:inset-r-12 md:inset-l-0 bg-gray-50/80 rounded-[2.5rem] border border-gray-100 z-0 transform rotate-1 transition-transform group-hover:rotate-0 duration-500">
+                  <div className="absolute inset-0 rounded-[2.5rem] bg-[radial-gradient(#D4D755_1.5px,transparent_1.5px)] [background-size:20px_20px] opacity-30"></div>
+                </div>
+
+                {/* Accent Dashed Frame */}
+                <div className="absolute inset-8 md:inset-y-10 md:inset-r-16 md:inset-l-4 border-2 border-dashed border-[#D4D755]/40 rounded-[2rem] z-0 transform -rotate-1 transition-transform group-hover:rotate-0 duration-500"></div>
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent md:bg-gradient-to-l md:from-transparent md:via-white/10 md:to-white z-10" />
 
                 <img
-                  src="/assets/transparant/5.png"
+                  src="/assets/transparant/12.png"
                   alt="Illustration"
-                  className="relative z-10 w-auto h-[130%] md:h-[140%] object-contain -mb-4 md:-mb-8 md:-mr-12 transform md:group-hover:scale-105 transition-transform duration-700 ease-in-out drop-shadow-2xl"
+                  className="relative z-20 w-auto h-[100%] md:h-[100%] object-contain -mb-4 md:-mb-8 md:-mr-12 transform md:group-hover:scale-105 transition-transform duration-700 ease-in-out drop-shadow-2xl"
                 />
               </div>
             </div>
@@ -433,15 +465,15 @@ function BenefitCard({ icon: Icon, title, desc, color, bg }: { icon: any; title:
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="p-6 rounded-2xl bg-[#09090b] border border-white/10 relative overflow-hidden group hover:border-[#D4D755]/30 transition-colors h-full flex flex-col items-center text-center"
+      className="p-6 rounded-2xl bg-white border border-[#D4D755]/20 relative overflow-hidden group hover:border-[#D4D755] transition-colors h-full flex flex-col items-center text-center shadow-lg"
     >
-      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#D4D755]/50 to-transparent opacity-50" />
+      <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#D4D755] to-transparent opacity-80" />
 
-      <div className={`w-14 h-14 rounded-full ${bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
+      <div className={`w-14 h-14 rounded-full ${bg} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md`}>
         <Icon className={`${color}`} size={26} />
       </div>
-      <h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-      <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+      <h3 className="text-lg font-bold text-black mb-2">{title}</h3>
+      <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
     </motion.div>
   );
 }

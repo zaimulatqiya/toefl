@@ -46,19 +46,19 @@ export default function Home() {
       {/* Headings */}
       <div className="max-w-4xl mx-auto text-center space-y-6 mb-16 relative z-10">
         <motion.h1 initial="hidden" animate="visible" variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-          Informasi & Pendaftaran <br />
+          Pusat Informasi & Pendaftaran <br />
           <span className="text-[#D4D755] drop-shadow-sm">Kampung Inggris</span>
         </motion.h1>
 
         <motion.p initial="hidden" animate="visible" variants={fadeInUp} className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          English Skill. Pusat pembelajaran bahasa terpercaya dengan metode modern untuk meningkatkan kemampuan komunikasi global Anda.
+          English Skill. Pusat pembelajaran bahasa terpercaya dengan metode modern untuk meningkatkan kemampuan komunikasi Bahasa Inggris.
         </motion.p>
       </div>
 
       {/* Cards Grid */}
       <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-5xl mb-24 relative z-10">
         <HomeFnCard icon={Laptop} title="Info Kelas Online" description="Belajar fleksibel dari mana saja dengan kurikulum terstruktur." delay={0.1} />
-        <HomeFnCard icon={BookOpen} title="Kelas TOEFL Online" description="Persiapan intensif skor maksimal dengan tutor berpengalaman." delay={0.2} href="/kelas-toefl"/>
+        <HomeFnCard icon={BookOpen} title="Kelas TOEFL Online" description="Persiapan intensif skor maksimal dengan tutor berpengalaman." delay={0.2} href="/kelas-toefl" />
         <HomeFnCard icon={FileText} title="Test TOEFL Prediction" description="Ukur kemampuan bahasa Inggris Anda sekarang. Hasil instan!" delay={0.3} href="/toefl-prediction" />
         <HomeFnCard icon={GraduationCap} title="Info Beasiswa 50%" description="Program hemat Kampung Inggris untuk pelajar berprestasi." delay={0.4} />
       </motion.div>
@@ -97,23 +97,21 @@ function HomeFnCard({ icon: Icon, title, description, delay, href, highlight }: 
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
       whileHover={{ y: -5 }}
-      className={`group relative flex items-start gap-5 p-6 rounded-3xl border transition-all duration-300 h-full overflow-hidden ${
-        highlight ? "bg-[#121217] border-[#D4D755]/50 hover:shadow-[0_0_30px_-5px_rgba(212,215,85,0.3)]" : "bg-[#121217] border-white/10 hover:border-white/20 hover:bg-[#1a1a20]"
-      }`}
+      className="group relative flex items-start gap-5 p-6 rounded-3xl border border-background bg-[#D4D755] transition-all duration-300 h-full overflow-hidden hover:shadow-[0_0_30px_-5px_rgba(212,215,85,0.4)]"
     >
-      {/* Glow Effect for Highlighted Card */}
-      {highlight && <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#D4D755]/10 rounded-full blur-2xl pointer-events-none group-hover:bg-[#D4D755]/20 transition-colors" />}
+      {/* Decor: White Glow/Reflection */}
+      <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl pointer-events-none group-hover:bg-white/30 transition-colors" />
 
-      <div className={`shrink-0 p-3.5 rounded-2xl flex items-center justify-center transition-colors ${highlight ? "bg-[#D4D755] text-black" : "bg-white/5 text-[#D4D755] group-hover:bg-[#D4D755] group-hover:text-black"}`}>
+      <div className="shrink-0 p-3.5 rounded-2xl flex items-center justify-center bg-black text-white shadow-lg">
         <Icon size={24} />
       </div>
 
       <div className="flex-1">
-        <h3 className={`font-bold text-lg mb-1 ${highlight ? "text-white" : "text-white group-hover:text-[#D4D755] transition-colors"}`}>{title}</h3>
-        <p className="text-gray-400 text-sm leading-relaxed group-hover:text-gray-300 transition-colors">{description}</p>
+        <h3 className="font-bold text-lg mb-1 text-black">{title}</h3>
+        <p className="text-black/70 text-sm leading-relaxed">{description}</p>
       </div>
 
-      <div className={`mt-2 ${highlight ? "text-[#D4D755]" : "text-gray-600 group-hover:text-white"} transition-colors`}>
+      <div className="mt-2 text-black">
         <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
       </div>
     </motion.div>
