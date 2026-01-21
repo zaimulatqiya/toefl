@@ -64,7 +64,7 @@ export default function ToeflPredictionPage() {
           <div className="relative mt-8 md:-mt-12 mx-auto w-full max-w-lg flex flex-col items-center justify-center">
             {/* Background Image */}
             {/* Background Image with Frame */}
-            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative z-0 w-[18rem] sm:w-[20rem] md:w-[22rem] -mb-12 md:-mb-20 mx-auto">
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative z-0 w-[15rem] sm:w-[20rem] md:w-[22rem] -mb-12 md:-mb-20 mx-auto">
               {/* Decorative Frame */}
               <div className="absolute inset-x-4 top-8 bottom-0 border border-[#D4D755]/30 rounded-[2.5rem] bg-[#D4D755]/5 backdrop-blur-sm z-0 transform rotate-1">
                 {/* Inner Glow */}
@@ -154,8 +154,8 @@ export default function ToeflPredictionPage() {
             {/* Illustration Image with Frame */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-8 w-64 h-64 md:w-60 md:h-60 group-hover:scale-105 transition-all duration-500">
               {/* Circular Backdrop/Frame */}
-              <div className="absolute inset-4 rounded-full border-2 border-black/5 bg-white/10 backdrop-blur-sm z-0 transform group-hover:rotate-12 transition-transform duration-700" />
-              <div className="absolute inset-4 rounded-full border border-black/10 z-0 transform -rotate-6 scale-90" />
+              <div className="absolute inset-4 rounded-full border-2 border-white/10 bg-[#18181b]/90 backdrop-blur-sm z-0 transform group-hover:rotate-12 transition-transform duration-700" />
+              <div className="absolute inset-4 rounded-full border border-white/80 z-0 transform -rotate-6 scale-90" />
 
               <img src="/assets/transparant/8.png" alt="Problem Illustration" className="relative z-10 w-full h-full object-contain drop-shadow-xl" />
             </div>
@@ -194,8 +194,8 @@ export default function ToeflPredictionPage() {
             {/* Illustration Image with Frame */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-15 w-80 h-80 md:w-72 md:h-72 group-hover:scale-105 transition-all duration-500 z-0">
               {/* Hexagon/Geometric Backdrop/Frame */}
-              <div className="absolute inset-8 border-2 border-dashed border-black/10 rounded-3xl bg-white/10 backdrop-blur-sm z-0 transform rotate-3 group-hover:-rotate-3 transition-transform duration-700" />
-              <div className="absolute inset-8 border border-black/5 rounded-3xl z-0 transform -rotate-3 scale-105" />
+              <div className="absolute inset-8 border-2 border-dashed border-black/10 rounded-3xl bg-white/90 backdrop-blur-sm z-0 transform rotate-3 group-hover:-rotate-3 transition-transform duration-700 shadow-sm" />
+              <div className="absolute inset-8 border border-black/20 rounded-3xl z-0 transform -rotate-3 scale-105" />
 
               <img src="/assets/transparant/7.png" alt="Solution Illustration" className="relative z-10 w-full h-full object-contain drop-shadow-xl" />
             </div>
@@ -301,35 +301,42 @@ export default function ToeflPredictionPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-200 to-transparent opacity-20 blur-3xl rounded-full"></div>
             <div className="relative bg-slate-900 p-2 rounded-xl shadow-2xl border border-slate-800 rotate-2 hover:rotate-0 transition-transform duration-500">
               {/* Mock Certificate Header */}
-              <div className="bg-white rounded-lg p-6 md:p-8 aspect-[1/1.4] flex flex-col items-center text-center relative overflow-hidden">
+              <div className="bg-white rounded-lg p-5 md:p-8 aspect-[1.58/1] md:aspect-[1/1.4] flex flex-col items-center justify-between text-center relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-                <div className="w-16 h-16 mb-4 relative z-10">
-                  <Award className="w-full h-full text-slate-900" />
+                {/* Header Section */}
+                <div className="relative z-10 w-full flex flex-col items-center">
+                  <div className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 relative">
+                    <Award className="w-full h-full text-slate-900" />
+                  </div>
+                  <h3 className="text-sm md:text-2xl font-serif font-bold text-slate-900 mb-1 md:mb-1 leading-tight">CERTIFICATE OF TOEFL</h3>
+                  <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest mb-1 md:mb-8">Prediction Score Report</p>
                 </div>
-                <h3 className="text-2xl font-serif font-bold text-slate-900 mb-1 z-10">CERTIFICATE OF TOEFL</h3>
-                <p className="text-xs text-slate-500 uppercase tracking-widest mb-8 z-10">Prediction Score Report</p>
 
-                <div className="w-full h-px bg-slate-200 mb-8 z-10"></div>
+                <div className="w-full h-px bg-slate-200 mb-2 md:mb-8 z-10"></div>
 
-                <p className="text-sm text-slate-600 mb-2 z-10">This is to certify that</p>
-                <p className="text-xl font-medium font-serif text-slate-900 italic mb-8 z-10">Student Name</p>
+                {/* Body Section */}
+                <div className="relative z-10 w-full">
+                  <p className="text-[10px] md:text-sm text-slate-600 mb-1 md:mb-2">This is to certify that</p>
+                  <p className="text-base md:text-xl font-medium font-serif text-slate-900 italic mb-3 md:mb-8">Student Name</p>
+                </div>
 
+                {/* Footer Section */}
                 <div className="mt-auto grid grid-cols-2 w-full gap-4 text-left z-10">
                   <div>
-                    <p className="text-[10px] text-slate-400 uppercase">Listening</p>
-                    <p className="font-medium text-slate-900">550</p>
+                    <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Listening</p>
+                    <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-[10px] text-slate-400 uppercase">Reading</p>
-                    <p className="font-medium text-slate-900">550</p>
+                    <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Reading</p>
+                    <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
                   </div>
                 </div>
 
                 {/* Stamp */}
-                <div className="absolute bottom-8 right-8 w-20 h-20 border-4 border-red-800/20 rounded-full flex items-center justify-center rotate-[-20deg]">
-                  <span className="text-[10px] text-red-900 font-bold text-center">
+                <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-14 h-14 md:w-20 md:h-20 border-2 md:border-4 border-red-800/20 rounded-full flex items-center justify-center rotate-[-20deg]">
+                  <span className="text-[8px] md:text-[10px] text-red-900 font-bold text-center leading-none">
                     OFFICIAL
                     <br />
                     VALID
@@ -429,7 +436,7 @@ export default function ToeflPredictionPage() {
 
               {/* Subtitles */}
               <div className="space-y-2 mb-10">
-                <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-[#121217]/60 uppercase">Limited Seats</p>
+                <p className="text-xl md:text-xl font-bold tracking-[0.3em] text-[#121217]/60 uppercase">Limited Seats</p>
                 <div className="flex justify-center gap-2 text-[#121217]/60 animate-bounce">
                   <ArrowRight className="rotate-90 w-4 h-4" />
                   <ArrowRight className="rotate-90 w-4 h-4" />

@@ -69,7 +69,7 @@ export default function Home() {
           <CheckCircle2 size={16} />
           <p className="font-bold text-sm text-white">Yayasan Global Operation Indonesia Verified</p>
         </div>
-        <p className="text-xs text-gray-500 font-mono">Sk-Diknas : 421.9/4958/418.20/2020 • Sk-Kumham : AHU-0013778.AH.01.04 Tahun 2020</p>
+        <p className="text-xs text-white font-mono">Sk-Diknas : 421.9/4958/418.20/2020 • Sk-Kumham : AHU-0013778.AH.01.04 Tahun 2020</p>
       </motion.div>
 
       <div className="mt-12 opacity-60 hover:opacity-100 transition-opacity">
@@ -108,7 +108,7 @@ function HomeFnCard({ icon: Icon, title, description, delay, href, highlight }: 
 
       <div className="flex-1">
         <h3 className="font-bold text-lg mb-1 text-black">{title}</h3>
-        <p className="text-black/70 text-sm leading-relaxed">{description}</p>
+        <p className="text-black text-sm leading-relaxed">{description}</p>
       </div>
 
       <div className="mt-2 text-black">

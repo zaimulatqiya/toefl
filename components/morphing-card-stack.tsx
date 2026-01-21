@@ -3,7 +3,7 @@
 import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence, LayoutGroup, type PanInfo } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Grid3X3, Layers, LayoutList } from "lucide-react";
+import { Grid3X3, Layers, LayoutList, ArrowRight } from "lucide-react";
 
 export type LayoutMode = "stack" | "grid" | "list";
 
@@ -169,14 +169,17 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
                   <div className={cn("flex gap-4", layout === "list" ? "items-center" : "items-start flex-col")}>
                     {card.icon && <div className="shrink-0">{card.icon}</div>}
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-bold text-lg text-white truncate mb-1">{card.title}</h3>
+                      <h3 className={cn("font-bold text-lg text-white mb-1", layout === "stack" ? "truncate" : "line-clamp-2 leading-snug drop-shadow-sm")}>{card.title}</h3>
                       <p className={cn("text-sm text-gray-400 mt-1", layout === "stack" && "line-clamp-3", layout === "grid" && "line-clamp-2", layout === "list" && "line-clamp-1")}>{card.description}</p>
                     </div>
                   </div>
 
                   {isTopCard && layout === "stack" && (
-                    <div className="absolute bottom-4 left-0 right-0 text-center">
-                      <span className="text-[10px] text-gray-600 font-medium uppercase tracking-widest">Swipe To Navigate</span>
+                    <div className="absolute bottom-4 left-0 right-0 text-center flex items-center justify-center gap-1">
+                      <span className="text-[10px] text-[#D4D755] font-medium uppercase tracking-widest">Swipe To Navigate</span>
+                      <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
+                        <ArrowRight className="w-3 h-3 text-[#D4D755]" />
+                      </motion.div>
                     </div>
                   )}
                 </motion.div>

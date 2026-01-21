@@ -87,8 +87,8 @@ function FeatureCard({ icon: Icon, title, subtitle, delay }: { icon: any; title:
       transition={{ delay }}
       className="bg-white/5 border border-white/10 p-4 rounded-2xl flex items-center gap-4 hover:bg-white/10 transition-colors duration-300"
     >
-      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-gray-300 group-hover:text-white transition-colors">
-        <Icon size={20} />
+      <div className="w-12 h-12 rounded-full bg-[#D4D755] shadow-lg shadow-[#D4D755]/20 flex items-center justify-center shrink-0 text-black group-hover:text-white transition-colors">
+        <Icon size={24} strokeWidth={2.5} />
       </div>
       <div>
         <h3 className="font-semibold text-white text-sm md:text-base">{title}</h3>
