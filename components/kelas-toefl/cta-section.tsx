@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { GetStartedButton } from "@/components/ui/get-started-button";
 
 export function CTASection() {
@@ -17,6 +17,11 @@ export function CTASection() {
         <div className="bg-gradient-to-br from-[#1A1A20] to-black p-8 rounded-3xl border border-[#D4D755]/30 shadow-[0_0_50px_-10px_rgba(212,215,85,0.2)]">
           <div className="flex flex-col gap-6 items-center">
             <p className="text-gray-400">Kelas dimulai dalam waktu dekat. Jangan tunda kesuksesanmu.</p>
+            <div className="flex justify-center gap-2 text-[#D4D755] animate-bounce">
+              <ArrowRight className="rotate-90 w-8 h-8" />
+              <ArrowRight className="rotate-90 w-8 h-8" />
+              <ArrowRight className="rotate-90 w-8 h-8" />
+            </div>
             <GetStartedButton text="DAFTAR SEKARANG - 99rb" className="w-full bg-[#D4D755] text-black hover:bg-[#c0c34b] py-4 md:py-8 text-base md:text-xl font-bold shadow-xl rounded-xl cursor-pointer" />
             <p className="text-xs text-gray-500 flex items-center gap-2">
               <CheckCircle2 size={12} className="text-green-500" /> Garansi Pembelajaran Professional

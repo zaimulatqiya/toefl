@@ -42,12 +42,12 @@ export default function ToeflPredictionPage() {
           </motion.div>
 
           <motion.h1 initial="hidden" animate="visible" variants={fadeInUp} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Gratis!!! <br />
-            <span className="text-[#D4D755]">Test TOEFL</span>
+            TEST TOEFL <br />
+            <span className="text-[#D4D755]">GRATIS!!!</span>
           </motion.h1>
 
           <motion.p initial="hidden" animate="visible" variants={fadeInUp} className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-            Tingkatkan kemampuan bahasa Inggris Anda dengan simulasi tes TOEFL standar internasional.
+            Tingkatkan kemampuan bahasa Inggris Anda dengan tes TOEFL Prediction standar internasional.
           </motion.p>
 
           <motion.div initial="hidden" animate="visible" variants={fadeInUp} className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -61,10 +61,10 @@ export default function ToeflPredictionPage() {
           </motion.div>
 
           {/* Floating Status & Image Container */}
-          <div className="relative mt-8 md:-mt-12 mx-auto w-full max-w-lg flex flex-col items-center justify-center">
+          <div className="relative mt-8 md:mt-12 mx-auto w-full max-w-lg flex flex-col items-center justify-center">
             {/* Background Image */}
             {/* Background Image with Frame */}
-            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative z-0 w-[15rem] sm:w-[20rem] md:w-[22rem] -mb-12 md:-mb-20 mx-auto">
+            <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="relative z-0 w-[15rem] sm:w-[18rem] md:w-[20rem] -mb-12 md:-mb-20 mx-auto">
               {/* Decorative Frame */}
               <div className="absolute inset-x-4 top-8 bottom-0 border border-[#D4D755]/30 rounded-[2.5rem] bg-[#D4D755]/5 backdrop-blur-sm z-0 transform rotate-1">
                 {/* Inner Glow */}
@@ -136,7 +136,7 @@ export default function ToeflPredictionPage() {
           {/* Problem Card (Discovery/Search Theme) */}
           <motion.div
             whileHover={{ y: -5 }}
-            className="group bg-[#D4D755] text-black p-8 pb-60 md:pb-8 rounded-3xl transition-all relative overflow-hidden min-h-[450px] md:min-h-[300px] flex flex-col md:justify-between hover:shadow-xl hover:shadow-[#D4D755]/20"
+            className="group bg-[#D4D755] text-black p-6 pb-52 md:p-8 md:pb-8 rounded-3xl transition-all relative overflow-hidden min-h-[380px] md:min-h-[300px] flex flex-col md:justify-between hover:shadow-xl hover:shadow-[#D4D755]/20"
           >
             {/* Abstract Graphic Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent opacity-50 pointer-events-none" />
@@ -154,7 +154,7 @@ export default function ToeflPredictionPage() {
             {/* Illustration Image with Frame */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-8 w-64 h-64 md:w-60 md:h-60 group-hover:scale-105 transition-all duration-500">
               {/* Circular Backdrop/Frame */}
-              <div className="absolute inset-4 rounded-full border-2 border-white/10 bg-[#18181b]/90 backdrop-blur-sm z-0 transform group-hover:rotate-12 transition-transform duration-700" />
+              <div className="absolute inset-4 rounded-full border-2 border-white/10 bg-[#b9bc27] backdrop-blur-sm z-0 transform group-hover:rotate-12 transition-transform duration-700" />
               <div className="absolute inset-4 rounded-full border border-white/80 z-0 transform -rotate-6 scale-90" />
 
               <img src="/assets/transparant/8.png" alt="Problem Illustration" className="relative z-10 w-full h-full object-contain drop-shadow-xl" />
@@ -175,7 +175,7 @@ export default function ToeflPredictionPage() {
           {/* Fact Card (Structure/Solution Theme) */}
           <motion.div
             whileHover={{ y: -5 }}
-            className="group bg-[#D4D755] text-black p-8 pb-72 md:pb-8 rounded-3xl transition-all relative overflow-hidden min-h-[450px] md:min-h-[300px] flex flex-col md:justify-between hover:shadow-xl hover:shadow-[#D4D755]/20"
+            className="group bg-[#D4D755] text-black p-6 pb-60 md:p-8 md:pb-8 rounded-3xl transition-all relative overflow-hidden min-h-[380px] md:min-h-[300px] flex flex-col md:justify-between hover:shadow-xl hover:shadow-[#D4D755]/20"
           >
             {/* Abstract Graphic Background */}
             <div className="absolute inset-0 bg-gradient-to-bl from-white/20 to-transparent opacity-50 pointer-events-none" />
@@ -192,10 +192,10 @@ export default function ToeflPredictionPage() {
 
             {/* Illustration Image */}
             {/* Illustration Image with Frame */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-15 w-80 h-80 md:w-72 md:h-72 group-hover:scale-105 transition-all duration-500 z-0">
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-15 w-72 h-72 md:w-72 md:h-72 group-hover:scale-105 transition-all duration-500 z-0">
               {/* Hexagon/Geometric Backdrop/Frame */}
-              <div className="absolute inset-8 border-2 border-dashed border-black/10 rounded-3xl bg-white/90 backdrop-blur-sm z-0 transform rotate-3 group-hover:-rotate-3 transition-transform duration-700 shadow-sm" />
-              <div className="absolute inset-8 border border-black/20 rounded-3xl z-0 transform -rotate-3 scale-105" />
+              <div className="absolute inset-12 border-2 border-dashed border-black/10 rounded-3xl bg-[#b9bc27] backdrop-blur-sm z-0 transform rotate-3 group-hover:-rotate-3 transition-transform duration-700 shadow-sm" />
+              <div className="absolute inset-12 border border-black/20 rounded-3xl z-0 transform -rotate-3 scale-105" />
 
               <img src="/assets/transparant/7.png" alt="Solution Illustration" className="relative z-10 w-full h-full object-contain drop-shadow-xl" />
             </div>
@@ -209,7 +209,7 @@ export default function ToeflPredictionPage() {
             </div>
 
             <div className="relative z-10 max-w-sm">
-              <p className="text-black/70 text-lg leading-relaxed font-medium">Cukup dengan 1 English Skill sudah bisa meningkatkan peluang kerja & karir, memperluas komunikasi dan sumber wawasan.</p>
+              <p className="text-black/70 text-lg leading-relaxed font-medium">Cukup dengan mengikuti TEST TOEFL di English Skill kalian sudah bisa meningkatkan peluang kerja & karir, memperluas komunikasi dan sumber wawasan.</p>
             </div>
           </motion.div>
         </div>
@@ -229,11 +229,11 @@ export default function ToeflPredictionPage() {
             {/* Card 2 */}
             <BenefitCard icon={Clock} title="Waktu Fleksibel" desc="Akses tes kapan saja dan dimana saja 24 jam non-stop." color="text-white" bg="bg-black" />
             {/* Card 3 */}
-            <BenefitCard icon={CheckCircle2} title="Skor Instan" desc="Skor TOEFL Prediction Anda akan muncul secara real-time." color="text-white" bg="bg-black" />
+            <BenefitCard icon={CheckCircle2} title="Skor Instan" desc="Skor TOEFL Anda akan muncul secara real-time." color="text-white" bg="bg-black" />
             {/* Card 4 */}
             <BenefitCard icon={Wifi} title="100% Online" desc="Mengerjakan ujian dari rumah menggunakan laptop/hp." color="text-white" bg="bg-black" />
             {/* Card 5 */}
-            <BenefitCard icon={ShieldCheck} title="Sertifikat Resmi" desc="Diakui legalitasnya oleh Yayasan Global Operation dan Dinas Pendidikan." color="text-white" bg="bg-black" />
+            <BenefitCard icon={ShieldCheck} title="Sertifikat Resmi" desc="Legalitas Yayasan Global Operation sudah ber SK.Diknas dan SK.Kumham" color="text-white" bg="bg-black" />
           </motion.div>
         </div>
       </section>
@@ -273,8 +273,8 @@ export default function ToeflPredictionPage() {
                   },
                   {
                     id: "usage-3",
-                    title: "Lampiran Test CPNS & BUMN",
-                    description: "Memenuhi persyaratan administrasi negara untuk seleksi CPNS dan BUMN.",
+                    title: "Lampiran Test CPNS dan BUMN",
+                    description: "Memenuhi persyaratan administrasi negara untuk seleksi CPNS, BUMN, dan Kediknasan.",
                     icon: (
                       <div className="w-10 h-10 rounded-full bg-[#D4D755] flex items-center justify-center shrink-0">
                         <FileCheck className="text-black" size={20} />
@@ -284,7 +284,7 @@ export default function ToeflPredictionPage() {
                   {
                     id: "usage-4",
                     title: "Persyaratan S1, S2, atau S3",
-                    description: "Diterima untuk pendaftaran universitas dalam dan luar negeri.",
+                    description: "Diterima untuk pendaftaran universitas dalam negeri.",
                     icon: (
                       <div className="w-10 h-10 rounded-full bg-[#D4D755] flex items-center justify-center shrink-0">
                         <School className="text-black" size={20} />
@@ -305,42 +305,49 @@ export default function ToeflPredictionPage() {
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-                {/* Header Section */}
-                <div className="relative z-10 w-full flex flex-col items-center">
-                  <div className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 relative">
-                    <Award className="w-full h-full text-slate-900" />
+                {/* Header Section (Desktop) */}
+                <div className="hidden md:flex flex-col items-center justify-between w-full h-full relative z-10">
+                  <div className="w-full flex flex-col items-center">
+                    <div className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 relative">
+                      <Award className="w-full h-full text-slate-900" />
+                    </div>
+                    <h3 className="text-sm md:text-2xl font-serif font-bold text-slate-900 mb-1 md:mb-1 leading-tight">CERTIFICATE OF TOEFL</h3>
+                    <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest mb-1 md:mb-8">Prediction Score Report</p>
                   </div>
-                  <h3 className="text-sm md:text-2xl font-serif font-bold text-slate-900 mb-1 md:mb-1 leading-tight">CERTIFICATE OF TOEFL</h3>
-                  <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest mb-1 md:mb-8">Prediction Score Report</p>
+
+                  <div className="w-full h-px bg-slate-200 mb-2 md:mb-8"></div>
+
+                  {/* Body Section */}
+                  <div className="w-full">
+                    <p className="text-[10px] md:text-sm text-slate-600 mb-1 md:mb-2">This is to certify that</p>
+                    <p className="text-base md:text-xl font-medium font-serif text-slate-900 italic mb-3 md:mb-8">Student Name</p>
+                  </div>
+
+                  {/* Footer Section */}
+                  <div className="mt-auto grid grid-cols-2 w-full gap-4 text-left">
+                    <div>
+                      <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Listening</p>
+                      <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Reading</p>
+                      <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
+                    </div>
+                  </div>
+
+                  {/* Stamp */}
+                  <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-14 h-14 md:w-20 md:h-20 border-2 md:border-4 border-red-800/20 rounded-full flex items-center justify-center rotate-[-20deg]">
+                    <span className="text-[8px] md:text-[10px] text-red-900 font-bold text-center leading-none">
+                      OFFICIAL
+                      <br />
+                      VALID
+                    </span>
+                  </div>
                 </div>
 
-                <div className="w-full h-px bg-slate-200 mb-2 md:mb-8 z-10"></div>
-
-                {/* Body Section */}
-                <div className="relative z-10 w-full">
-                  <p className="text-[10px] md:text-sm text-slate-600 mb-1 md:mb-2">This is to certify that</p>
-                  <p className="text-base md:text-xl font-medium font-serif text-slate-900 italic mb-3 md:mb-8">Student Name</p>
-                </div>
-
-                {/* Footer Section */}
-                <div className="mt-auto grid grid-cols-2 w-full gap-4 text-left z-10">
-                  <div>
-                    <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Listening</p>
-                    <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Reading</p>
-                    <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
-                  </div>
-                </div>
-
-                {/* Stamp */}
-                <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-14 h-14 md:w-20 md:h-20 border-2 md:border-4 border-red-800/20 rounded-full flex items-center justify-center rotate-[-20deg]">
-                  <span className="text-[8px] md:text-[10px] text-red-900 font-bold text-center leading-none">
-                    OFFICIAL
-                    <br />
-                    VALID
-                  </span>
+                {/* Mobile Image */}
+                <div className="md:hidden relative z-10 w-full h-full flex items-center justify-center">
+                  <img src="/assets/sertif-1.jpeg" alt="Certificate Preview" className="w-full h-full object-contain scale-125" />
                 </div>
               </div>
             </div>
@@ -370,16 +377,20 @@ export default function ToeflPredictionPage() {
                 </div>
 
                 <ul className="space-y-4">
-                  {["Sertifikat ini adalah hasil simulasi (Prediction Test).", "Hanya diterbitkan oleh lembaga bahasa resmi (Global Foundation).", "Dapat digunakan untuk keperluan internal, Syarat Skripsi, atau lampiran kerja."].map(
-                    (text, i) => (
-                      <li key={i} className="flex gap-4 items-start group/item">
-                        <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center shrink-0 mt-0.5 shadow-md shadow-black/10">
-                          <div className="w-1.5 h-1.5 rounded-full bg-[#D4D755]" />
-                        </div>
-                        <span className="text-base leading-relaxed text-gray-600">{text}</span>
-                      </li>
-                    ),
-                  )}
+                  {[
+                    "TOEFL adalah merek terdaftar Educational Testing Service (ETS).",
+                    " TOEFL Prediction Test yang diselenggarakan oleh ENGLISH SKILL adalah simulasi dari TOEFL tes dari ETS ITP dan skor yang didapat adalah prediksi.",
+                    " Sertifikat yang diperoleh dari Tes ini dapat digunakan sebagai tolak ukur kemampuan bahasa inggris peserta tes.",
+                    " Kami tidak menerima jual beli sertifikat, Karena Nilai pada sertifikat harus lah sesuai dengan nilai dari hasil test yang diu jikan kepada peserta.",
+                    "Penggunaan sertifikat TOEFL sebagai syarat sidang skripsi, thesis, wisuda dan lampiran pekerjaan dikembalikan kepada kebijakan kampus atau instansi lembaga masing-masing.",
+                  ].map((text, i) => (
+                    <li key={i} className="flex gap-4 items-start group/item">
+                      <div className="w-6 h-6 rounded-full bg-black flex items-center justify-center shrink-0 mt-0.5 shadow-md shadow-black/10">
+                        <div className="w-1.5 h-1.5 rounded-full bg-[#D4D755]" />
+                      </div>
+                      <span className="text-base leading-relaxed text-gray-600">{text}</span>
+                    </li>
+                  ))}
                 </ul>
               </div>
 
@@ -435,12 +446,12 @@ export default function ToeflPredictionPage() {
               </h2>
 
               {/* Subtitles */}
-              <div className="space-y-2 mb-10">
+              <div className="space-y-2 mb-4">
                 <p className="text-xl md:text-xl font-bold tracking-[0.3em] text-[#121217]/60 uppercase">Limited Seats</p>
                 <div className="flex justify-center gap-2 text-[#121217]/60 animate-bounce">
-                  <ArrowRight className="rotate-90 w-4 h-4" />
-                  <ArrowRight className="rotate-90 w-4 h-4" />
-                  <ArrowRight className="rotate-90 w-4 h-4" />
+                  <ArrowRight className="rotate-90 w-12 h-12" />
+                  <ArrowRight className="rotate-90 w-12 h-12" />
+                  <ArrowRight className="rotate-90 w-12 h-12" />
                 </div>
               </div>
 
@@ -472,7 +483,7 @@ function BenefitCard({ icon: Icon, title, desc, color, bg }: { icon: any; title:
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="p-6 rounded-2xl bg-white border border-[#D4D755]/20 relative overflow-hidden group hover:border-[#D4D755] transition-colors h-full flex flex-col items-center text-center shadow-lg"
+      className="p-2 rounded-2xl bg-white border border-[#D4D755]/20 relative overflow-hidden group hover:border-[#D4D755] transition-colors h-full flex flex-col items-center text-center shadow-lg"
     >
       <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-transparent via-[#D4D755] to-transparent opacity-80" />
 

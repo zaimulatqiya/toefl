@@ -40,7 +40,7 @@ export default function Home() {
 
       {/* Logo Image */}
       <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.1 }} className="mb-8">
-        <img src="/assets/logo-2.png" alt="English Skill Logo" className="w-24 h-24 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
+        <img src="/assets/logo-2.png" alt="English Skill Logo" className="w-32 h-32 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500" />
       </motion.div>
 
       {/* Headings */}
@@ -51,12 +51,12 @@ export default function Home() {
         </motion.h1>
 
         <motion.p initial="hidden" animate="visible" variants={fadeInUp} className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          English Skill. Pusat pembelajaran bahasa terpercaya dengan metode modern untuk meningkatkan kemampuan komunikasi Bahasa Inggris.
+          English Skill. Pusat pembelajaran bahasa terpercaya dengan metode moderen untuk meningkatkan kemampuan komunikasi Bahasa Inggris.
         </motion.p>
       </div>
 
       {/* Cards Grid */}
-      <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-5xl mb-24 relative z-10">
+      <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 w-full max-w-5xl mb-24 relative z-10">
         <HomeFnCard icon={Laptop} title="Info Kelas Online" description="Belajar fleksibel dari mana saja dengan kurikulum terstruktur." delay={0.1} />
         <HomeFnCard icon={BookOpen} title="Kelas TOEFL Online" description="Persiapan intensif skor maksimal dengan tutor berpengalaman." delay={0.2} href="/kelas-toefl" />
         <HomeFnCard icon={FileText} title="Test TOEFL Prediction" description="Ukur kemampuan bahasa Inggris Anda sekarang. Hasil instan!" delay={0.3} href="/toefl-prediction" />
@@ -64,7 +64,7 @@ export default function Home() {
       </motion.div>
 
       {/* Footer / Verification Area */}
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }} className="w-full max-w-4xl p-6 rounded-2xl bg-[#121217] border border-white/5 text-center space-y-3 backdrop-blur-md">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.8 }} className="w-full max-w-4xl p-6 rounded-2xl bg-[#2a2a36] border border-white/5 text-center space-y-3 backdrop-blur-md">
         <div className="flex items-center justify-center gap-2 text-[#D4D755]">
           <CheckCircle2 size={16} />
           <p className="font-bold text-sm text-white">Yayasan Global Operation Indonesia Verified</p>
@@ -97,22 +97,22 @@ function HomeFnCard({ icon: Icon, title, description, delay, href, highlight }: 
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
       }}
       whileHover={{ y: -5 }}
-      className="group relative flex items-start gap-5 p-6 rounded-3xl border border-background bg-[#D4D755] transition-all duration-300 h-full overflow-hidden hover:shadow-[0_0_30px_-5px_rgba(212,215,85,0.4)]"
+      className="group relative flex items-start gap-3 p-2 md:gap-5 md:p-6 rounded-3xl border border-background bg-[#D4D755] transition-all duration-300 h-full overflow-hidden hover:shadow-[0_0_30px_-5px_rgba(212,215,85,0.4)]"
     >
       {/* Decor: White Glow/Reflection */}
       <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-2xl pointer-events-none group-hover:bg-white/30 transition-colors" />
 
-      <div className="shrink-0 p-3.5 rounded-2xl flex items-center justify-center bg-black text-white shadow-lg">
-        <Icon size={24} />
+      <div className="shrink-0 p-2.5 md:p-3.5 rounded-2xl flex items-center justify-center bg-black text-white shadow-lg">
+        <Icon className="w-5 h-5 md:w-6 md:h-6" />
       </div>
 
       <div className="flex-1">
-        <h3 className="font-bold text-lg mb-1 text-black">{title}</h3>
-        <p className="text-black text-sm leading-relaxed">{description}</p>
+        <h3 className="font-bold text-base md:text-lg mb-1 text-black">{title}</h3>
+        <p className="text-black text-xs md:text-sm leading-relaxed">{description}</p>
       </div>
 
       <div className="mt-2 text-black">
-        <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+        <ArrowRight className="w-4 h-4 md:w-5 md:h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
       </div>
     </motion.div>
   );

@@ -100,14 +100,14 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
   return (
     <div className={cn("space-y-4", className)}>
       {/* Layout Toggle */}
-      <div className="flex items-center justify-center gap-1 rounded-lg bg-secondary/50 p-1 w-fit mx-auto">
+      <div className="flex items-center justify-center gap-1 rounded-lg bg-black/5 border border-white/10 p-1 w-fit mx-auto backdrop-blur-sm">
         {(Object.keys(layoutIcons) as LayoutMode[]).map((mode) => {
           const Icon = layoutIcons[mode];
           return (
             <button
               key={mode}
               onClick={() => setLayout(mode)}
-              className={cn("rounded-md p-2 transition-all", layout === mode ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground hover:bg-secondary")}
+              className={cn("rounded-md p-2 transition-all", layout === mode ? "bg-[#D4D755] text-black shadow-sm" : "text-gray-400 hover:text-black hover:bg-white/5")}
               aria-label={`Switch to ${mode} layout`}
             >
               <Icon className="h-4 w-4" />
@@ -176,7 +176,7 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
 
                   {isTopCard && layout === "stack" && (
                     <div className="absolute bottom-4 left-0 right-0 text-center flex items-center justify-center gap-1">
-                      <span className="text-[10px] text-[#D4D755] font-medium uppercase tracking-widest">Swipe To Navigate</span>
+                      <span className="text-[10px] text-[#D4D755] font-bold uppercase tracking-widest">Swipe To Navigate</span>
                       <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
                         <ArrowRight className="w-3 h-3 text-[#D4D755]" />
                       </motion.div>
