@@ -60,7 +60,7 @@ export default function Home() {
         <HomeFnCard icon={Laptop} title="Info Kelas Online" description="Belajar fleksibel dari mana saja dengan kurikulum terstruktur." delay={0.1} />
         <HomeFnCard icon={BookOpen} title="Kelas TOEFL Online" description="Persiapan intensif skor maksimal dengan tutor berpengalaman." delay={0.2} href="/kelas-toefl" />
         <HomeFnCard icon={FileText} title="Test TOEFL Prediction" description="Ukur kemampuan bahasa Inggris Anda sekarang. Hasil instan!" delay={0.3} href="/toefl-prediction" />
-        <HomeFnCard icon={GraduationCap} title="Info Beasiswa 50%" description="Program hemat Kampung Inggris untuk pelajar berprestasi." delay={0.4} />
+        <HomeFnCard icon={GraduationCap} title="Info Beasiswa 50% Kampung Inggris" description="Program hemat Kampung Inggris untuk pelajar berprestasi." delay={0.4} />
       </motion.div>
 
       {/* Footer / Verification Area */}
