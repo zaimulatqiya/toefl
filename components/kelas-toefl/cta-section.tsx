@@ -2,8 +2,12 @@
 
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { GetStartedButton } from "@/components/ui/get-started-button";
+import { useState } from "react";
+import { RegistrationModal } from "@/components/registration-modal";
 
 export function CTASection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="daftar-sekarang" className="py-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#D4D755]/5" />
@@ -22,13 +26,19 @@ export function CTASection() {
               <ArrowRight className="rotate-90 w-8 h-8" />
               <ArrowRight className="rotate-90 w-8 h-8" />
             </div>
-            <GetStartedButton text="DAFTAR SEKARANG - 99rb" className="w-full bg-[#D4D755] text-black hover:bg-[#c0c34b] py-4 md:py-8 text-base md:text-xl font-bold shadow-xl rounded-xl cursor-pointer" />
+            <GetStartedButton
+              text="DAFTAR SEKARANG - 99rb"
+              className="w-full bg-[#D4D755] text-black hover:bg-[#c0c34b] py-4 md:py-8 text-base md:text-xl font-bold shadow-xl rounded-xl cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
+            />
             <p className="text-xs text-gray-500 flex items-center gap-2">
               <CheckCircle2 size={12} className="text-green-500" /> Garansi Pembelajaran Professional
             </p>
           </div>
         </div>
       </div>
+
+      <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }
