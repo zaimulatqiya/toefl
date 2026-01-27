@@ -6,7 +6,6 @@ import { Footer } from "@/components/Footer";
 import { Component as MorphingCardStack } from "@/components/morphing-card-stack";
 import { CheckCircle2, Clock, Award, Wifi, ShieldCheck, AlertCircle, Lightbulb, GraduationCap, Briefcase, FileCheck, School, ArrowRight, ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { RegistrationModal } from "@/components/registration-modal";
 
 export default function ToeflPredictionPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -462,7 +461,7 @@ export default function ToeflPredictionPage() {
               <GetStartedButton
                 id="daftar-cta"
                 text="DAFTAR SEKARANG"
-                onClick={() => setIsModalOpen(true)}
+                
                 className="w-full md:w-auto bg-[#121217] hover:bg-black text-white hover:text-[#D4D755] text-lg font-bold pl-10 pr-14 py-7 h-auto rounded-xl shadow-xl hover:shadow-2xl mx-auto cursor-pointer border border-transparent hover:border-[#D4D755]/50"
               />
 
@@ -473,7 +472,7 @@ export default function ToeflPredictionPage() {
         </div>
       </section>
 
-      <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      
       <Footer />
     </main>
   );
