@@ -192,7 +192,6 @@ export default function ToeflPredictionPage() {
               </div>
             </div>
 
-            {/* Illustration Image */}
             {/* Illustration Image with Frame */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-15 w-72 h-72 md:w-72 md:h-72 group-hover:scale-105 transition-all duration-500 z-0">
               {/* Hexagon/Geometric Backdrop/Frame */}
@@ -307,44 +306,9 @@ export default function ToeflPredictionPage() {
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]"></div>
 
-                {/* Header Section (Desktop) */}
-                <div className="hidden md:flex flex-col items-center justify-between w-full h-full relative z-10">
-                  <div className="w-full flex flex-col items-center">
-                    <div className="w-10 h-10 md:w-16 md:h-16 mb-2 md:mb-4 relative">
-                      <Award className="w-full h-full text-slate-900" />
-                    </div>
-                    <h3 className="text-sm md:text-2xl font-serif font-bold text-slate-900 mb-1 md:mb-1 leading-tight">CERTIFICATE OF TOEFL</h3>
-                    <p className="text-[10px] md:text-xs text-slate-500 uppercase tracking-widest mb-1 md:mb-8">Prediction Score Report</p>
-                  </div>
-
-                  <div className="w-full h-px bg-slate-200 mb-2 md:mb-8"></div>
-
-                  {/* Body Section */}
-                  <div className="w-full">
-                    <p className="text-[10px] md:text-sm text-slate-600 mb-1 md:mb-2">This is to certify that</p>
-                    <p className="text-base md:text-xl font-medium font-serif text-slate-900 italic mb-3 md:mb-8">Student Name</p>
-                  </div>
-
-                  {/* Footer Section */}
-                  <div className="mt-auto grid grid-cols-2 w-full gap-4 text-left">
-                    <div>
-                      <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Listening</p>
-                      <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-[8px] md:text-[10px] text-slate-400 uppercase">Reading</p>
-                      <p className="font-medium text-slate-900 text-sm md:text-base">550</p>
-                    </div>
-                  </div>
-
-                  {/* Stamp */}
-                  <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-14 h-14 md:w-20 md:h-20 border-2 md:border-4 border-red-800/20 rounded-full flex items-center justify-center rotate-[-20deg]">
-                    <span className="text-[8px] md:text-[10px] text-red-900 font-bold text-center leading-none">
-                      OFFICIAL
-                      <br />
-                      VALID
-                    </span>
-                  </div>
+                {/* Desktop Image */}
+                <div className="hidden md:flex relative z-10 w-full h-full items-center justify-center">
+                  <img src="/assets/sertif-2.jpeg" alt="Certificate Preview" className="w-full h-full object-contain scale-[1.1]" />
                 </div>
 
                 {/* Mobile Image */}
@@ -461,7 +425,6 @@ export default function ToeflPredictionPage() {
               <GetStartedButton
                 id="daftar-cta"
                 text="DAFTAR SEKARANG"
-                
                 className="w-full md:w-auto bg-[#121217] hover:bg-black text-white hover:text-[#D4D755] text-lg font-bold pl-10 pr-14 py-7 h-auto rounded-xl shadow-xl hover:shadow-2xl mx-auto cursor-pointer border border-transparent hover:border-[#D4D755]/50"
               />
 
@@ -472,7 +435,6 @@ export default function ToeflPredictionPage() {
         </div>
       </section>
 
-      
       <Footer />
     </main>
   );
