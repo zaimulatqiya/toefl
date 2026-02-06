@@ -33,8 +33,8 @@ export default function DaftarToeflPage() {
           <div className="inline-flex items-center justify-center mb-6 group cursor-default">
             <Image src="/assets/logo.png" alt="English Skill Education Logo" width={100} height={100} className="w-24 h-auto object-contain group-hover:scale-110 transition-transform duration-500 drop-shadow-xl" />
           </div>
-          <h1 className="text-2xl md:text-3xl font-medium text-zinc-900 tracking-tight mb-3">English Skill Education</h1>
-          <p className="text-sm md:text-base text-zinc-600 max-w-xs md:max-w-lg mx-auto leading-relaxed">
+          <h1 className="text-3xl md:text-3xl font-semibold text-zinc-900 tracking-tight mb-3">English Skill</h1>
+          <p className="text-lg md:text-base text-zinc-600 max-w-xs md:max-w-lg mx-auto leading-relaxed">
             Selesaikan langkah berikut untuk mengikuti ujian ulang <span className="text-[#0F1005] font-bold">TEST TOEFL</span>.
           </p>
         </div>
@@ -48,13 +48,13 @@ export default function DaftarToeflPage() {
               <div className="absolute left-5 top-10 bottom-[-32px] w-px bg-zinc-200"></div>
 
               <div className="absolute left-0 top-1 w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center z-10 shadow-sm text-zinc-600 transition-colors">
-                <span className="text-xs font-mono text-zinc-800">1</span>
+                <span className="text-sm font-mono font-medium text-zinc-800">1</span>
               </div>
 
               <div className="flex flex-col gap-3">
                 <div>
-                  <h3 className="text-sm font-medium text-zinc-900">Tag 3 Teman</h3>
-                  <p className="text-xs text-zinc-500 mt-0.5">Di kolom komentar postingan Instagram</p>
+                  <h3 className="text-sm font-semibold text-zinc-900">Tag 3 Teman</h3>
+                  <p className="text-sm text-zinc-500 mt-0.5">Di kolom komentar postingan Instagram</p>
                 </div>
 
                 <button
@@ -66,7 +66,7 @@ export default function DaftarToeflPage() {
                     <div className="p-1.5 rounded-md bg-pink-50 text-pink-500">
                       <Instagram size={18} strokeWidth={1.5} />
                     </div>
-                    <span className="text-xs font-medium text-zinc-600 group-hover:text-zinc-900 transition-colors">Buka Postingan</span>
+                    <span className="text-sm font-semibold text-zinc-600 group-hover:text-zinc-900 transition-colors">Buka Postingan</span>
                   </div>
                   {loadingStep === "step1" ? <Loader2 size={16} className="text-zinc-400 animate-spin" /> : <ArrowRight size={16} className="text-zinc-400 group-hover:text-zinc-600 transition-colors" />}
                 </button>
@@ -79,13 +79,13 @@ export default function DaftarToeflPage() {
               <div className="absolute left-5 top-10 bottom-[-50px] w-px bg-zinc-200"></div>
 
               <div className="absolute left-0 top-1 w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center z-10 shadow-sm text-zinc-600">
-                <span className="text-xs font-mono text-zinc-800">2</span>
+                <span className="text-sm font-mono font-medium text-zinc-800">2</span>
               </div>
 
               <div className="flex flex-col gap-3">
                 <div>
-                  <h3 className="text-sm font-medium text-zinc-900">Follow Instagram</h3>
-                  <p className="text-xs text-zinc-500 mt-0.5">Ikuti akun resmi @SkillEducation</p>
+                  <h3 className="text-sm font-semibold text-zinc-900">Follow Instagram</h3>
+                  <p className="text-sm text-zinc-500 mt-0.5">Ikuti akun resmi @EnglishSkill</p>
                 </div>
 
                 <button
@@ -97,7 +97,7 @@ export default function DaftarToeflPage() {
                     <div className="p-1.5 rounded-md bg-blue-50 text-blue-500">
                       <UserPlus size={18} strokeWidth={1.5} />
                     </div>
-                    <span className="text-xs font-medium text-zinc-600 group-hover:text-zinc-900 transition-colors">Follow Akun</span>
+                    <span className="text-sm font-semibold text-zinc-600 group-hover:text-zinc-900 transition-colors">Follow Akun</span>
                   </div>
                   {loadingStep === "step2" ? <Loader2 size={16} className="text-zinc-400 animate-spin" /> : <ArrowRight size={16} className="text-zinc-400 group-hover:text-zinc-600 transition-colors" />}
                 </button>
@@ -109,8 +109,8 @@ export default function DaftarToeflPage() {
               <div className="flex gap-3 items-start">
                 <AlertTriangle size={16} className="text-red-500 shrink-0 mt-0.5" />
                 <div className="space-y-1">
-                  <p className="text-xs font-medium text-red-700">Verifikasi Wajib</p>
-                  <p className="text-xs text-red-600/80 leading-relaxed">Selesaikan langkah 1 &amp; 2 terlebih dahulu. Data Anda tidak akan terinput jika melewati tahapan ini.</p>
+                  <p className="text-sm font-semibold text-red-700">Verifikasi Wajib</p>
+                  <p className="text-sm text-red-600/80 leading-relaxed">Selesaikan langkah 1 &amp; 2 terlebih dahulu. Data Anda tidak akan terinput jika melewati tahapan ini.</p>
                 </div>
               </div>
             </div>
@@ -118,13 +118,13 @@ export default function DaftarToeflPage() {
             {/* Step 3 (Final) */}
             <div className="relative pl-14">
               <div className="absolute left-0 top-1 w-10 h-10 rounded-full bg-white border border-zinc-200 flex items-center justify-center z-10 shadow-sm text-zinc-600">
-                <span className="text-xs font-mono text-zinc-800">3</span>
+                <span className="text-sm font-mono font-medium text-zinc-800">3</span>
               </div>
 
               <div className="flex flex-col gap-3">
                 <div>
-                  <h3 className="text-sm font-medium text-zinc-900">Gabung Group Whatsapp</h3>
-                  <p className="text-xs text-zinc-500 mt-0.5">Akses materi dan jadwal ujian</p>
+                  <h3 className="text-sm font-semibold text-zinc-900">Gabung Group Whatsapp</h3>
+                  <p className="text-sm text-zinc-500 mt-0.5">Akses materi dan jadwal ujian</p>
                 </div>
 
                 <button
@@ -132,8 +132,8 @@ export default function DaftarToeflPage() {
                   disabled={loadingStep === "step3"}
                   className="relative overflow-hidden w-full group p-3.5 rounded-xl bg-zinc-900 border border-zinc-900 hover:bg-zinc-800 transition-all duration-300 flex items-center justify-center gap-2 mt-1 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer touch-manipulation shadow-md shadow-zinc-200"
                 >
-                  <span className="text-sm font-medium text-white">{loadingStep === "step3" ? "Memuat..." : "Gabung Sekarang"}</span>
-                  {loadingStep === "step3" ? <Loader2 size={18} className="text-white animate-spin" /> : <Users size={18} strokeWidth={1.5} className="text-white" />}
+                  <span className="text-sm font-semibold text-white">{loadingStep === "step3" ? "Memuat..." : "Gabung Sekarang"}</span>
+                  {loadingStep === "step3" ? <Loader2 size={18} className="text-white animate-spin" /> : <Users size={18} strokeWidth={2} className="text-white" />}
                 </button>
               </div>
             </div>
