@@ -60,7 +60,7 @@ export function Component({ cards = [], className, defaultLayout = "stack", onCa
       const index = (activeIndex + i) % cards.length;
       reordered.push({ ...cards[index], stackPosition: i });
     }
-    return reordered.reverse(); // Reverse so top card renders last (on top)
+    return reordered.reverse();
   };
 
   const getLayoutStyles = (stackPosition: number) => {
