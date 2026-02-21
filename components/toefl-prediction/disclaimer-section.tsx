@@ -29,7 +29,7 @@ export function DisclaimerSection() {
                   <h4 className="font-bold text-2xl text-black tracking-tight">Disclaimer Penting</h4>
                   <motion.div
                     initial={{ width: 0 }}
-                    whileInView={{ width: 48 }} // equivalent to w-12
+                    whileInView={{ width: 48 }}
                     transition={{ delay: 0.5, duration: 0.6 }}
                     viewport={{ once: true }}
                     className="h-1 bg-[#D4D755] rounded-full mt-1"
