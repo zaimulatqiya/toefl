@@ -5,12 +5,21 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { AtSign, ArrowRight, UserPlus, AlertTriangle, Users, Instagram, Loader2 } from "lucide-react";
+import { getLandingPageLinks } from "@/lib/get-landing-page-links";
 
 export default function DaftarToeflPage() {
   const router = useRouter();
+  const [links, setLinks] = useState<{ instagram_post: string; instagram_account: string; group: string } | null>(null);
   const [loadingStep, setLoadingStep] = useState<string | null>(null);
 
   useEffect(() => {
+    async function fetchLinks() {
+      const data = await getLandingPageLinks();
+      if (data?.ujian_ulang) {
+        setLinks(data.ujian_ulang);
+      }
+    }
+    fetchLinks();
     setLoadingStep(null);
   }, []);
 
@@ -58,7 +67,7 @@ export default function DaftarToeflPage() {
                 </div>
 
                 <button
-                  onClick={() => handleLinkClick("#", "step1")}
+                  onClick={() => handleLinkClick(links?.instagram_post || "#", "step1")}
                   disabled={loadingStep === "step1"}
                   className="group relative flex items-center justify-between w-full p-3 rounded-lg bg-white border border-zinc-200 hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-300 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer touch-manipulation shadow-sm"
                 >
@@ -89,7 +98,7 @@ export default function DaftarToeflPage() {
                 </div>
 
                 <button
-                  onClick={() => handleLinkClick("#", "step2")}
+                  onClick={() => handleLinkClick(links?.instagram_account || "#", "step2")}
                   disabled={loadingStep === "step2"}
                   className="group relative flex items-center justify-between w-full p-3 rounded-lg bg-white border border-zinc-200 hover:bg-zinc-50 hover:border-zinc-300 transition-all duration-300 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer touch-manipulation shadow-sm"
                 >
@@ -128,7 +137,7 @@ export default function DaftarToeflPage() {
                 </div>
 
                 <button
-                  onClick={() => handleLinkClick("", "step3")}
+                  onClick={() => handleLinkClick(links?.group || "#", "step3")}
                   disabled={loadingStep === "step3"}
                   className="relative overflow-hidden w-full group p-3.5 rounded-xl bg-zinc-900 border border-zinc-900 hover:bg-zinc-800 transition-all duration-300 flex items-center justify-center gap-2 mt-1 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer touch-manipulation shadow-md shadow-zinc-200"
                 >

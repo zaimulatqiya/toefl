@@ -1,13 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { ArrowRight, Send, AlertTriangle, Users, Loader2 } from "lucide-react";
+import { getLandingPageLinks } from "@/lib/get-landing-page-links";
 
 export function RegistrationSteps() {
+  const [links, setLinks] = useState<{ whatsapp: string; telegram: string; group: string } | null>(null);
   const [loadingStep, setLoadingStep] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchLinks() {
+      const data = await getLandingPageLinks();
+      if (data?.test_toefl) {
+        setLinks(data.test_toefl);
+      }
+    }
+    fetchLinks();
+  }, []);
 
   const handleLinkClick = (href: string, step: string) => {
     setLoadingStep(step);
@@ -60,7 +72,7 @@ export function RegistrationSteps() {
                 </div>
 
                 <button
-                  onClick={() => handleLinkClick("#", "step1")}
+                  onClick={() => handleLinkClick(links?.whatsapp || "#", "step1")}
                   disabled={loadingStep === "step1"}
                   className="group relative flex items-center justify-between w-full p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                 >
@@ -91,7 +103,7 @@ export function RegistrationSteps() {
                 </div>
 
                 <button
-                  onClick={() => handleLinkClick("#", "step2")}
+                  onClick={() => handleLinkClick(links?.telegram || "#", "step2")}
                   disabled={loadingStep === "step2"}
                   className="group relative flex items-center justify-between w-full p-3 rounded-lg bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700 transition-all duration-300 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                 >
@@ -130,7 +142,7 @@ export function RegistrationSteps() {
                 </div>
 
                 <button
-                  onClick={() => handleLinkClick("", "step3")}
+                  onClick={() => handleLinkClick(links?.group || "#", "step3")}
                   disabled={loadingStep === "step3"}
                   className="relative overflow-hidden w-full group p-3.5 rounded-xl bg-zinc-50 border border-zinc-200 hover:bg-white transition-all duration-300 flex items-center justify-center gap-2 mt-1 active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                 >
